@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+  head
+    title Schedula Electrolica
+    script(src="/jquery-3.1.0.min.js")
+    link(rel="stylesheet" href="/bootstrap-3.3.7-dist/css/bootstrap.min.css")
+    script(src="/bootstrap-3.3.7-dist/js/bootstrap.min.js")
+    script(src='https://cdn.socket.io/socket.io-1.2.0.js')
+    script(src='http://code.jquery.com/jquery-1.11.1.js')
+
+    link(rel="stylesheet" href="/bootstrap-3.3.7-dist/thirdparty/buttons.css")
+
+    link(rel="stylesheet" href="/FontAwesome/css/font-awesome.css")
+
+    link(rel="stylesheet" href="/client.css")
+
+    if SystemInfo
+      script.
+        console.log('SystemInfo');
+        window.SystemInfo = !{JSON.stringify(SystemInfo)};
+    else
+      script.
+        console.log('No SystemInfo');
+
+
+    script(src="/client.js")
+  body.preload
+      div.row
+       h1(id="title" style = "text-align: center") Welcome to Schedula Electrolica
+      div.row
+        div#Calendar
