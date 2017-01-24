@@ -1,1 +1,1 @@
-# schedulaElectrolica
+# schedulaElectrolicka
